@@ -641,66 +641,86 @@ button {
   line-height: 1.6;
 }
 
-/* ===== PORTFOLIO ===== */
-.portfolio-grid {
+/* ===== PORTFOLIO (Featured Showcase) ===== */
+.portfolio-featured {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-xl);
-  margin-top: var(--space-3xl);
-}
-
-.portfolio-card {
-  display: block;
+  grid-template-columns: 1.2fr 1fr;
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
+  margin-top: var(--space-3xl);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-featured:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 50px var(--glow-secondary);
+}
+
+.portfolio-featured-image {
+  overflow: hidden;
   position: relative;
-  aspect-ratio: 4 / 3;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
-.portfolio-card:hover {
-  border-color: var(--glass-border);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px var(--glow-secondary);
-}
-
-.portfolio-card img {
+.portfolio-featured-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow);
 }
 
-.portfolio-card:hover img {
+.portfolio-featured:hover .portfolio-featured-image img {
   transform: scale(1.05);
 }
 
-.portfolio-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 60%);
+.portfolio-featured-info {
+  padding: var(--space-3xl);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: var(--space-xl);
-  opacity: 0;
-  transition: opacity var(--transition-base);
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
 }
 
-.portfolio-card:hover .portfolio-overlay {
-  opacity: 1;
+.portfolio-tag {
+  display: inline-block;
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-start);
+  margin-bottom: var(--space-md);
 }
 
-.portfolio-overlay h3 {
-  font-size: var(--fs-h3);
-  font-weight: var(--fw-semibold);
-  margin-bottom: 4px;
+.portfolio-featured h3 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-md);
 }
 
-.portfolio-overlay p {
-  font-size: var(--fs-small);
+.portfolio-featured p {
+  font-size: var(--fs-body);
   color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}
+
+.portfolio-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  transition: gap var(--transition-fast);
+}
+
+.portfolio-featured:hover .portfolio-link {
+  gap: var(--space-md);
+  color: var(--accent-mid);
 }
 
 /* ===== PRICING (Auf Anfrage) ===== */
