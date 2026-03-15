@@ -3,417 +3,401 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="PageForge — Maßgeschneiderte Websites die wirken. Web Design Studio aus Innsbruck.">
-<meta name="theme-color" content="#060a06">
-<title>PageForge — Websites die wirken</title>
+<meta name="description" content="PageForge — Maßgeschneiderte Websites die wirken.">
+<title>PageForge</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="dot"></div>
-<div id="ring"></div>
+<div id="cur"></div>
 
 <!-- NAV -->
 <nav id="nav">
-  <a class="logo" href="#">
-    <div class="logo-mark">
-      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="5" height="5" fill="#060a06"/>
-        <rect x="8" y="8" width="5" height="5" fill="#060a06"/>
-        <rect x="8" y="1" width="5" height="5" fill="#060a06" opacity="0.35"/>
-      </svg>
-    </div>
-    PageForge
-  </a>
-  <ul class="nav-mid">
-    <li><a href="#portfolio">Portfolio</a></li>
+  <a class="logo" href="#">PAGE<span>FORGE</span></a>
+  <ul class="nav-links">
+    <li><a href="#portfolio">Arbeiten</a></li>
     <li><a href="#pakete">Pakete</a></li>
     <li><a href="#prozess">Prozess</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a class="nav-cta" href="#kontakt">Projekt anfragen</a>
-  <button class="nav-burger" id="burger" aria-label="Menü öffnen">
-    <span></span><span></span>
-  </button>
+  <a class="nav-cta" href="#kontakt">Projekt anfragen →</a>
+  <button class="burger" id="burger"><span></span><span></span></button>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <ul>
-    <li><a href="#portfolio" onclick="closeMobile()">Portfolio</a></li>
-    <li><a href="#pakete" onclick="closeMobile()">Pakete</a></li>
-    <li><a href="#prozess" onclick="closeMobile()">Prozess</a></li>
-    <li><a href="#faq" onclick="closeMobile()">FAQ</a></li>
-    <li><a href="#kontakt" onclick="closeMobile()" class="mobile-cta">Projekt anfragen</a></li>
-  </ul>
+<div class="mob-menu" id="mobMenu">
+  <a href="#portfolio" onclick="closeMob()">Arbeiten</a>
+  <a href="#pakete" onclick="closeMob()">Pakete</a>
+  <a href="#prozess" onclick="closeMob()">Prozess</a>
+  <a href="#faq" onclick="closeMob()">FAQ</a>
+  <a href="#kontakt" onclick="closeMob()" class="mob-cta">Projekt anfragen →</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-
-  <div class="hero-eyebrow">
-    <span class="eyebrow-line"></span>
-    Web Design Studio — Innsbruck
+  <div class="hero-left">
+    <div class="hero-tag ri">WEB DESIGN STUDIO — INNSBRUCK</div>
+    <h1 class="hero-h1 ri">
+      WEB<br>
+      <em>SITES</em><br>
+      DIE<br>
+      WIR<span class="red">—</span><br>
+      KEN.
+    </h1>
   </div>
 
-  <h1 class="hero-h1">
-    Websites<br>
-    <span class="h1-dim">die</span> <span class="h1-accent">wirken.</span>
-  </h1>
-
-  <div class="hero-bottom">
-    <p class="hero-sub">Ich entwickle maßgeschneiderte Websites für Unternehmen, die online wachsen wollen — von der ersten Idee bis zum Launch.</p>
-    <div class="hero-actions">
-      <a class="btn-primary" href="#kontakt">Projekt starten</a>
-      <a class="btn-ghost" href="#portfolio">
-        Arbeiten ansehen
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+  <div class="hero-right">
+    <div class="hero-sub ri">
+      Ich entwickle maßgeschneiderte Websites für Unternehmen, die online wachsen wollen — von der ersten Idee bis zum Launch.
+    </div>
+    <div class="hero-actions ri">
+      <a class="btn-main" href="#kontakt">Projekt starten</a>
+      <a class="btn-line" href="#portfolio">Arbeiten ansehen</a>
+    </div>
+    <div class="hero-nums ri">
+      <div class="hnum">
+        <div class="hnum-n">40<sup>+</sup></div>
+        <div class="hnum-l">Projekte</div>
+      </div>
+      <div class="hnum">
+        <div class="hnum-n">5★</div>
+        <div class="hnum-l">Bewertung</div>
+      </div>
+      <div class="hnum">
+        <div class="hnum-n">3–7</div>
+        <div class="hnum-l">Tage Lieferzeit</div>
+      </div>
     </div>
   </div>
 
-  <div class="hero-stats">
-    <div class="hstat"><div class="hstat-n">40<em>+</em></div><div class="hstat-l">Projekte</div></div>
-    <div class="hstat"><div class="hstat-n">100<em>%</em></div><div class="hstat-l">Zufriedenheit</div></div>
-    <div class="hstat"><div class="hstat-n">5<em>★</em></div><div class="hstat-l">Bewertung</div></div>
-    <div class="hstat"><div class="hstat-n">3<em>–7</em></div><div class="hstat-l">Tage Lieferzeit</div></div>
-  </div>
+  <div class="hero-scroll">↓ scrollen</div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <span class="ti"><span class="tid"></span>Landing Pages</span>
-    <span class="ti"><span class="tid"></span>Corporate Sites</span>
-    <span class="ti"><span class="tid"></span>Online Shops</span>
-    <span class="ti"><span class="tid"></span>SEO Optimierung</span>
-    <span class="ti"><span class="tid"></span>UI / UX Design</span>
-    <span class="ti"><span class="tid"></span>Webentwicklung</span>
-    <span class="ti"><span class="tid"></span>Responsive Design</span>
-    <span class="ti"><span class="tid"></span>Conversion Optimierung</span>
-    <span class="ti"><span class="tid"></span>Landing Pages</span>
-    <span class="ti"><span class="tid"></span>Corporate Sites</span>
-    <span class="ti"><span class="tid"></span>Online Shops</span>
-    <span class="ti"><span class="tid"></span>SEO Optimierung</span>
-    <span class="ti"><span class="tid"></span>UI / UX Design</span>
-    <span class="ti"><span class="tid"></span>Webentwicklung</span>
-    <span class="ti"><span class="tid"></span>Responsive Design</span>
-    <span class="ti"><span class="tid"></span>Conversion Optimierung</span>
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>LANDING PAGES</span><span class="sep">✦</span>
+    <span>CORPORATE SITES</span><span class="sep">✦</span>
+    <span>ONLINE SHOPS</span><span class="sep">✦</span>
+    <span>SEO OPTIMIERUNG</span><span class="sep">✦</span>
+    <span>UI / UX DESIGN</span><span class="sep">✦</span>
+    <span>WEBENTWICKLUNG</span><span class="sep">✦</span>
+    <span>RESPONSIVE DESIGN</span><span class="sep">✦</span>
+    <span>LANDING PAGES</span><span class="sep">✦</span>
+    <span>CORPORATE SITES</span><span class="sep">✦</span>
+    <span>ONLINE SHOPS</span><span class="sep">✦</span>
+    <span>SEO OPTIMIERUNG</span><span class="sep">✦</span>
+    <span>UI / UX DESIGN</span><span class="sep">✦</span>
+    <span>WEBENTWICKLUNG</span><span class="sep">✦</span>
+    <span>RESPONSIVE DESIGN</span><span class="sep">✦</span>
   </div>
 </div>
 
 <!-- PORTFOLIO -->
-<section class="sec work" id="portfolio">
-  <div class="work-header ri">
-    <div>
-      <div class="sec-label">Ausgewählte Projekte</div>
-      <h2 class="sec-title">Aktuelle Arbeiten.</h2>
-    </div>
-    <p class="work-sub">Jedes Projekt entsteht in enger Zusammenarbeit — von der Strategie bis zum fertigen Produkt.</p>
+<section class="sec portfolio" id="portfolio">
+  <div class="sec-head ri">
+    <div class="sec-index">01</div>
+    <h2 class="sec-title">AUSGEWÄHLTE<br><em>ARBEITEN</em></h2>
   </div>
 
-  <div class="work-grid">
-    <div class="work-item ri">
-      <div class="work-thumb" style="background:linear-gradient(140deg,#060d10,#0d1f18)">
-        <div class="mock">
-          <div class="mock-bar" style="background:#0d1a14">
-            <div class="md" style="background:#ff5f57"></div><div class="md" style="background:#febc2e"></div><div class="md" style="background:#28c840"></div>
-          </div>
-          <div class="mock-body" style="background:#060d0a;padding:16px 18px">
-            <div style="height:7px;width:55%;background:rgba(52,211,120,0.2);border-radius:2px;margin-bottom:10px"></div>
-            <div style="height:20px;width:80%;background:rgba(255,255,255,0.14);border-radius:2px;margin-bottom:8px"></div>
-            <div style="height:7px;width:40%;background:rgba(255,255,255,0.06);border-radius:2px;margin-bottom:18px"></div>
-            <div style="height:28px;width:110px;background:#34d378;border-radius:4px;margin-bottom:16px"></div>
-            <div style="display:flex;gap:8px">
-              <div style="height:52px;flex:1;background:rgba(255,255,255,0.04);border-radius:4px"></div>
-              <div style="height:52px;flex:1;background:rgba(255,255,255,0.04);border-radius:4px"></div>
-              <div style="height:52px;flex:1;background:rgba(255,255,255,0.04);border-radius:4px"></div>
+  <div class="port-grid">
+
+    <div class="port-item ri">
+      <div class="port-thumb t-agency">
+        <div class="port-browser">
+          <div class="pb-bar"><span class="pb-d r"></span><span class="pb-d y"></span><span class="pb-d g"></span></div>
+          <div class="pb-body" style="background:#0a0a14;padding:14px 16px">
+            <div style="height:6px;width:50%;background:rgba(180,140,255,.2);border-radius:1px;margin-bottom:8px"></div>
+            <div style="height:18px;width:80%;background:rgba(255,255,255,.14);border-radius:1px;margin-bottom:7px"></div>
+            <div style="height:24px;width:90px;background:#b48cff;border-radius:3px;margin-bottom:14px"></div>
+            <div style="display:flex;gap:6px">
+              <div style="height:44px;flex:1;background:rgba(255,255,255,.04);border-radius:2px"></div>
+              <div style="height:44px;flex:1;background:rgba(255,255,255,.04);border-radius:2px"></div>
+              <div style="height:44px;flex:1;background:rgba(255,255,255,.04);border-radius:2px"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="work-meta">
-        <div><div class="work-name">Apex Studio</div><div class="work-tag">Agentur Website</div></div>
-        <div class="work-arr">↗</div>
+      <div class="port-info">
+        <div>
+          <div class="port-cat">Agentur</div>
+          <div class="port-name">Apex Studio</div>
+        </div>
+        <a href="#" class="port-arr">↗</a>
       </div>
     </div>
 
-    <div class="work-item ri">
-      <div class="work-thumb" style="background:linear-gradient(140deg,#1a0f0a,#2e1a10)">
-        <div class="mock">
-          <div class="mock-bar" style="background:#2a1e16">
-            <div class="md" style="background:#ff5f57"></div><div class="md" style="background:#febc2e"></div><div class="md" style="background:#28c840"></div>
-          </div>
-          <div class="mock-body" style="background:#faf5ed;padding:16px 18px">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-              <div style="height:9px;width:60px;background:rgba(0,0,0,0.5);border-radius:2px"></div>
-              <div style="display:flex;gap:8px"><div style="height:7px;width:28px;background:rgba(0,0,0,0.15);border-radius:2px"></div><div style="height:7px;width:28px;background:rgba(0,0,0,0.15);border-radius:2px"></div></div>
-            </div>
-            <div style="height:60px;background:linear-gradient(135deg,#c8a882,#b0906a);border-radius:4px;margin-bottom:10px"></div>
-            <div style="height:7px;width:70%;background:rgba(0,0,0,0.15);border-radius:2px;margin-bottom:6px"></div>
-            <div style="height:7px;width:50%;background:rgba(0,0,0,0.1);border-radius:2px"></div>
+    <div class="port-item ri">
+      <div class="port-thumb t-cafe">
+        <div class="port-browser">
+          <div class="pb-bar" style="background:#d4b896"><span class="pb-d r"></span><span class="pb-d y"></span><span class="pb-d g"></span></div>
+          <div class="pb-body" style="background:#f9f1e7;padding:14px 16px">
+            <div style="height:6px;width:35%;background:rgba(0,0,0,.15);border-radius:1px;margin-bottom:7px"></div>
+            <div style="height:20px;width:72%;background:rgba(0,0,0,.5);border-radius:1px;margin-bottom:7px"></div>
+            <div style="height:56px;background:linear-gradient(135deg,#d4a96a,#b8895a);border-radius:3px;margin-bottom:8px"></div>
+            <div style="height:6px;width:65%;background:rgba(0,0,0,.1);border-radius:1px;margin-bottom:4px"></div>
+            <div style="height:6px;width:45%;background:rgba(0,0,0,.08);border-radius:1px"></div>
           </div>
         </div>
       </div>
-      <div class="work-meta">
-        <div><div class="work-name">Maison Brun</div><div class="work-tag">Restaurant & Café</div></div>
-        <div class="work-arr">↗</div>
+      <div class="port-info">
+        <div>
+          <div class="port-cat">Restaurant</div>
+          <div class="port-name">Maison Brun</div>
+        </div>
+        <a href="#" class="port-arr">↗</a>
       </div>
     </div>
 
-    <div class="work-item ri">
-      <div class="work-thumb" style="background:linear-gradient(140deg,#0a0f18,#0d1a2e)">
-        <div class="mock">
-          <div class="mock-bar" style="background:#111d2e">
-            <div class="md" style="background:#ff5f57"></div><div class="md" style="background:#febc2e"></div><div class="md" style="background:#28c840"></div>
-          </div>
-          <div class="mock-body" style="background:#f4f8ff;padding:16px 18px">
-            <div style="height:7px;width:40%;background:rgba(37,99,235,0.2);border-radius:2px;margin-bottom:8px"></div>
-            <div style="height:18px;width:75%;background:rgba(0,0,0,0.6);border-radius:2px;margin-bottom:8px"></div>
+    <div class="port-item ri">
+      <div class="port-thumb t-saas">
+        <div class="port-browser">
+          <div class="pb-bar" style="background:#e8f0fb"><span class="pb-d r"></span><span class="pb-d y"></span><span class="pb-d g"></span></div>
+          <div class="pb-body" style="background:#f0f6ff;padding:14px 16px">
+            <div style="height:6px;width:42%;background:rgba(37,99,235,.18);border-radius:1px;margin-bottom:7px"></div>
+            <div style="height:18px;width:78%;background:rgba(0,0,0,.55);border-radius:1px;margin-bottom:8px"></div>
             <div style="display:flex;gap:6px;margin-bottom:12px">
-              <div style="height:26px;width:86px;background:#2563eb;border-radius:20px"></div>
-              <div style="height:26px;width:86px;border:1.5px solid #cbd5e1;border-radius:20px"></div>
+              <div style="height:26px;width:84px;background:#2563eb;border-radius:20px"></div>
+              <div style="height:26px;width:84px;border:1.5px solid #cbd5e1;border-radius:20px"></div>
             </div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-              <div style="height:32px;background:#eff6ff;border-radius:4px;border:1px solid #dbeafe"></div>
-              <div style="height:32px;background:#eff6ff;border-radius:4px;border:1px solid #dbeafe"></div>
+              <div style="height:30px;background:#eff6ff;border-radius:3px;border:1px solid #dbeafe"></div>
+              <div style="height:30px;background:#eff6ff;border-radius:3px;border:1px solid #dbeafe"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="work-meta">
-        <div><div class="work-name">CloudSync SaaS</div><div class="work-tag">SaaS Landing Page</div></div>
-        <div class="work-arr">↗</div>
+      <div class="port-info">
+        <div>
+          <div class="port-cat">SaaS</div>
+          <div class="port-name">CloudSync</div>
+        </div>
+        <a href="#" class="port-arr">↗</a>
       </div>
     </div>
 
-    <div class="work-item ri">
-      <div class="work-thumb" style="background:linear-gradient(140deg,#0a140f,#142010)">
-        <div class="mock">
-          <div class="mock-bar" style="background:#142010">
-            <div class="md" style="background:#ff5f57"></div><div class="md" style="background:#febc2e"></div><div class="md" style="background:#28c840"></div>
-          </div>
-          <div class="mock-body" style="background:#0e1a0f;padding:16px 18px">
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
-              <div style="height:8px;width:64px;background:rgba(52,211,120,0.3);border-radius:2px"></div>
-              <div style="display:flex;gap:6px"><div style="height:7px;width:22px;background:rgba(255,255,255,0.1);border-radius:2px"></div><div style="height:7px;width:22px;background:rgba(255,255,255,0.1);border-radius:2px"></div></div>
+    <div class="port-item ri">
+      <div class="port-thumb t-hotel">
+        <div class="port-browser">
+          <div class="pb-bar" style="background:#1a2a1c"><span class="pb-d r"></span><span class="pb-d y"></span><span class="pb-d g"></span></div>
+          <div class="pb-body" style="background:#0e1a0f;padding:14px 16px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+              <div style="height:7px;width:60px;background:rgba(160,210,100,.3);border-radius:1px"></div>
+              <div style="display:flex;gap:5px"><div style="height:6px;width:20px;background:rgba(255,255,255,.1);border-radius:1px"></div><div style="height:6px;width:20px;background:rgba(255,255,255,.1);border-radius:1px"></div></div>
             </div>
-            <div style="height:72px;background:rgba(255,255,255,0.03);border-radius:4px;border:1px solid rgba(255,255,255,0.06);margin-bottom:10px"></div>
-            <div style="display:flex;gap:6px">
-              <div style="flex:1;height:28px;background:rgba(52,211,120,0.12);border-radius:3px;border:1px solid rgba(52,211,120,0.2)"></div>
-              <div style="flex:1;height:28px;background:rgba(255,255,255,0.04);border-radius:3px"></div>
+            <div style="height:64px;background:rgba(255,255,255,.03);border-radius:3px;border:1px solid rgba(255,255,255,.06);margin-bottom:8px"></div>
+            <div style="display:flex;gap:5px">
+              <div style="flex:1;height:22px;background:rgba(160,210,100,.14);border-radius:2px"></div>
+              <div style="flex:1;height:22px;background:rgba(255,255,255,.04);border-radius:2px"></div>
+              <div style="flex:1;height:22px;background:rgba(255,255,255,.04);border-radius:2px"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="work-meta">
-        <div><div class="work-name">Verdura Resort</div><div class="work-tag">Hotel & Booking</div></div>
-        <div class="work-arr">↗</div>
+      <div class="port-info">
+        <div>
+          <div class="port-cat">Hotel</div>
+          <div class="port-name">Verdura Resort</div>
+        </div>
+        <a href="#" class="port-arr">↗</a>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- PAKETE -->
-<section class="sec pakete" id="pakete">
-  <div class="ri">
-    <div class="sec-label">Transparente Preise</div>
-    <h2 class="sec-title">Was ich anbiete.</h2>
+<section class="sec pakete-sec" id="pakete">
+  <div class="sec-head ri">
+    <div class="sec-index">02</div>
+    <h2 class="sec-title">MEINE<br><em>PAKETE</em></h2>
   </div>
-  <div class="pakete-grid">
-    <div class="pak ri">
-      <div class="pak-badge">Starter</div>
-      <div class="pak-name">Schnell online.</div>
-      <p class="pak-desc">Perfekt für Freelancer und lokale Betriebe, die einen professionellen ersten Auftritt brauchen.</p>
-      <div class="pak-price">490€</div>
-      <div class="pak-period">einmalig, inkl. MwSt.</div>
-      <ul class="pak-feat">
+
+  <div class="pakete-wrap">
+
+    <div class="paket ri">
+      <div class="paket-top">
+        <div class="paket-name">Starter</div>
+        <div class="paket-tag">Für den Einstieg</div>
+      </div>
+      <div class="paket-price">490<span>€</span></div>
+      <div class="paket-note">einmalig, inkl. MwSt.</div>
+      <ul class="paket-list">
         <li>Bis zu 5 Unterseiten</li>
-        <li>Responsives Design (Mobile-First)</li>
-        <li>Kontaktformular & Google Maps</li>
+        <li>Responsives Design</li>
+        <li>Kontaktformular & Maps</li>
         <li>SEO-Grundoptimierung</li>
         <li>Lieferung in 7 Tagen</li>
       </ul>
-      <a class="pak-btn" href="#kontakt">Anfragen</a>
+      <a href="#kontakt" class="paket-btn">Anfragen →</a>
     </div>
-    <div class="pak featured ri">
-      <div class="pak-badge">Empfohlen</div>
-      <div class="pak-name">Wachsen.</div>
-      <p class="pak-desc">Für wachsende Unternehmen mit klaren Zielen. Custom Design, mehr Seiten, mehr Wirkung.</p>
-      <div class="pak-price">1.290€</div>
-      <div class="pak-period">einmalig, inkl. MwSt.</div>
-      <ul class="pak-feat">
+
+    <div class="paket featured ri">
+      <div class="paket-rec">EMPFOHLEN</div>
+      <div class="paket-top">
+        <div class="paket-name">Business</div>
+        <div class="paket-tag">Für Wachstum</div>
+      </div>
+      <div class="paket-price">1.290<span>€</span></div>
+      <div class="paket-note">einmalig, inkl. MwSt.</div>
+      <ul class="paket-list">
         <li>Unbegrenzte Seiten</li>
         <li>Custom Design & Branding</li>
         <li>Blog / News System</li>
         <li>Vollständige SEO-Optimierung</li>
-        <li>Google Analytics & Speed-Opt.</li>
+        <li>Google Analytics</li>
         <li>Lieferung in 5 Tagen</li>
       </ul>
-      <a class="pak-btn" href="#kontakt">Anfragen</a>
+      <a href="#kontakt" class="paket-btn">Anfragen →</a>
     </div>
-    <div class="pak ri">
-      <div class="pak-badge">Premium</div>
-      <div class="pak-name">Dominieren.</div>
-      <p class="pak-desc">Das komplette Paket. E-Commerce, Animationen, laufende Betreuung und alles dazwischen.</p>
-      <div class="pak-price">2.490€</div>
-      <div class="pak-period">einmalig, inkl. MwSt.</div>
-      <ul class="pak-feat">
-        <li>Online Shop mit Stripe / PayPal</li>
-        <li>Custom Animationen & Micro-UX</li>
+
+    <div class="paket ri">
+      <div class="paket-top">
+        <div class="paket-name">Premium</div>
+        <div class="paket-tag">Das Komplettpaket</div>
+      </div>
+      <div class="paket-price">2.490<span>€</span></div>
+      <div class="paket-note">einmalig, inkl. MwSt.</div>
+      <ul class="paket-list">
+        <li>Online Shop (Stripe/PayPal)</li>
+        <li>Custom Animationen</li>
         <li>E-Mail Automation</li>
         <li>Technischer SEO Audit</li>
-        <li>3 Monate laufende Betreuung</li>
+        <li>3 Monate Betreuung</li>
         <li>Lieferung in 3 Tagen</li>
       </ul>
-      <a class="pak-btn" href="#kontakt">Anfragen</a>
+      <a href="#kontakt" class="paket-btn">Anfragen →</a>
     </div>
+
   </div>
 </section>
 
 <!-- PROZESS -->
-<section class="sec process" id="prozess">
-  <div class="ri">
-    <div class="sec-label">Wie es läuft</div>
-    <h2 class="sec-title">Von Idee zu Launch.</h2>
+<section class="sec prozess-sec" id="prozess">
+  <div class="sec-head ri">
+    <div class="sec-index">03</div>
+    <h2 class="sec-title">VON IDEE<br><em>ZU LAUNCH</em></h2>
   </div>
-  <div class="process-row">
-    <div class="p-step ri">
+
+  <div class="prozess-list">
+    <div class="p-item ri">
       <div class="p-num">01</div>
-      <div class="p-title">Briefing</div>
-      <p class="p-desc">Wir sprechen über dein Business, deine Ziele und was eine erfolgreiche Website für dich bedeutet.</p>
+      <div class="p-body">
+        <div class="p-title">Briefing</div>
+        <p class="p-desc">Wir sprechen über dein Business, deine Ziele und was eine erfolgreiche Website für dich bedeutet.</p>
+      </div>
     </div>
-    <div class="p-step ri">
+    <div class="p-item ri">
       <div class="p-num">02</div>
-      <div class="p-title">Design</div>
-      <p class="p-desc">Du siehst das Konzept, bevor auch nur eine Zeile Code entsteht. Feedback eingebaut.</p>
+      <div class="p-body">
+        <div class="p-title">Design</div>
+        <p class="p-desc">Du siehst das Konzept bevor eine Zeile Code entsteht. Dein Feedback ist fest eingeplant.</p>
+      </div>
     </div>
-    <div class="p-step ri">
+    <div class="p-item ri">
       <div class="p-num">03</div>
-      <div class="p-title">Entwicklung</div>
-      <p class="p-desc">Schnell, sauber, mobiloptimiert. Ich baue mit Blick auf Ladezeit, SEO und Conversion.</p>
+      <div class="p-body">
+        <div class="p-title">Entwicklung</div>
+        <p class="p-desc">Schnell, sauber, mobiloptimiert. Jede Zeile mit Blick auf Ladezeit, SEO und Conversion.</p>
+      </div>
     </div>
-    <div class="p-step ri">
+    <div class="p-item ri">
       <div class="p-num">04</div>
-      <div class="p-title">Launch</div>
-      <p class="p-desc">Live schalten, Domain einrichten, Übergabe mit Anleitung. Du bist sofort eigenständig.</p>
+      <div class="p-body">
+        <div class="p-title">Launch</div>
+        <p class="p-desc">Live schalten, Domain einrichten, Übergabe mit Anleitung. Du bist sofort eigenständig.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="sec trust" id="vertrauen">
-  <div class="ri">
-    <div class="sec-label">Ergebnisse & Stimmen</div>
-    <h2 class="sec-title">Vertrauen durch Resultate.</h2>
+<!-- STIMMEN -->
+<section class="sec stimmen-sec">
+  <div class="sec-head ri">
+    <div class="sec-index">04</div>
+    <h2 class="sec-title">WAS KUNDEN<br><em>SAGEN</em></h2>
   </div>
-  <div class="trust-top">
-    <div class="trust-stat ri">
-      <div class="trust-n">3<em>×</em></div>
-      <div class="trust-l">Mehr Anfragen im Schnitt nach dem Relaunch</div>
-    </div>
-    <div class="trust-stat ri">
-      <div class="trust-n">&lt;1.5<em>s</em></div>
-      <div class="trust-l">Durchschnittliche Ladezeit aller Projekte</div>
-    </div>
-  </div>
-  <div class="reviews-grid">
-    <div class="rev ri">
-      <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"Schnell, präzise, kein Stress. Ich hab kurz erklärt was ich will und bekam eine Website, die besser war als alles was ich mir vorgestellt hatte."</p>
-      <div class="rev-author">
-        <div class="rev-av" style="background:rgba(52,211,120,0.12);color:#34d378">MK</div>
-        <div><div class="rev-name">Marco K.</div><div class="rev-role">Architekturbüro, Wien</div></div>
+
+  <div class="stimmen-grid">
+    <div class="stimme ri">
+      <div class="stimme-stars">★★★★★</div>
+      <p class="stimme-text">"Schnell, präzise, kein Stress. Ich hab kurz erklärt was ich will und bekam eine Website, die besser war als alles was ich mir vorgestellt hatte."</p>
+      <div class="stimme-author">
+        <div class="stimme-av">MK</div>
+        <div>
+          <div class="stimme-name">Marco K.</div>
+          <div class="stimme-role">Architekturbüro, Wien</div>
+        </div>
       </div>
     </div>
-    <div class="rev ri">
-      <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"Seit dem Relaunch kommen 3x mehr Anfragen über meine Website. Das Design wirkt einfach professionell und seriös — genau das was meine Kunden brauchen."</p>
-      <div class="rev-author">
-        <div class="rev-av" style="background:rgba(255,200,100,0.1);color:#f0c060">SH</div>
-        <div><div class="rev-name">Sandra H.</div><div class="rev-role">Coaching & Beratung</div></div>
+    <div class="stimme ri">
+      <div class="stimme-stars">★★★★★</div>
+      <p class="stimme-text">"Seit dem Relaunch kommen 3× mehr Anfragen. Das Design wirkt professionell und seriös — genau das was meine Kunden brauchen."</p>
+      <div class="stimme-author">
+        <div class="stimme-av">SH</div>
+        <div>
+          <div class="stimme-name">Sandra H.</div>
+          <div class="stimme-role">Coaching & Beratung</div>
+        </div>
       </div>
     </div>
-    <div class="rev ri">
-      <div class="rev-stars">★★★★★</div>
-      <p class="rev-text">"Innerhalb von 5 Tagen war mein Shop live. Alles sauber erklärt, keine versteckten Kosten. Werde definitiv für mein nächstes Projekt wiederkommen."</p>
-      <div class="rev-author">
-        <div class="rev-av" style="background:rgba(100,180,255,0.1);color:#64b4ff">TB</div>
-        <div><div class="rev-name">Tim B.</div><div class="rev-role">E-Commerce, München</div></div>
+    <div class="stimme ri">
+      <div class="stimme-stars">★★★★★</div>
+      <p class="stimme-text">"Innerhalb von 5 Tagen war mein Shop live. Alles sauber erklärt, keine versteckten Kosten. Definitiv wieder."</p>
+      <div class="stimme-author">
+        <div class="stimme-av">TB</div>
+        <div>
+          <div class="stimme-name">Tim B.</div>
+          <div class="stimme-role">E-Commerce, München</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="sec faq" id="faq">
-  <div class="ri">
-    <div class="sec-label">Häufige Fragen</div>
-    <h2 class="sec-title">FAQ</h2>
+<section class="sec faq-sec" id="faq">
+  <div class="sec-head ri">
+    <div class="sec-index">05</div>
+    <h2 class="sec-title">HÄUFIGE<br><em>FRAGEN</em></h2>
   </div>
-  <div class="faq-body">
-    <div class="fq ri"><button class="fq-btn" onclick="faq(this)">Wie läuft die Zusammenarbeit ab?<span class="fq-icon">+</span></button><div class="fq-ans"><p>Wir starten mit einem kurzen Gespräch per Call oder Chat. Danach schicke ich ein Konzept und Angebot. Nach deiner Freigabe startet die Entwicklung — du wirst regelmäßig auf dem Laufenden gehalten.</p></div></div>
-    <div class="fq ri"><button class="fq-btn" onclick="faq(this)">Wie lange dauert ein Projekt?<span class="fq-icon">+</span></button><div class="fq-ans"><p>Je nach Paket zwischen 3 und 7 Werktagen. Bei größeren Projekten mit Custom-Features können es auch 2 Wochen sein — immer transparent kommuniziert.</p></div></div>
-    <div class="fq ri"><button class="fq-btn" onclick="faq(this)">Was brauche ich, um zu starten?<span class="fq-icon">+</span></button><div class="fq-ans"><p>Im Idealfall: dein Logo, Texte und Bilder. Falls du das noch nicht hast, helfe ich dir dabei oder arbeite mit Platzhaltern, die du später ersetzt.</p></div></div>
-    <div class="fq ri"><button class="fq-btn" onclick="faq(this)">Kann ich die Website danach selbst bearbeiten?<span class="fq-icon">+</span></button><div class="fq-ans"><p>Ja. Du bekommst eine kurze Einführung und kannst Texte, Bilder und Inhalte eigenständig anpassen. Auf Wunsch richte ich ein einfaches CMS ein.</p></div></div>
-    <div class="fq ri"><button class="fq-btn" onclick="faq(this)">Bietest du auch Hosting an?<span class="fq-icon">+</span></button><div class="fq-ans"><p>Ich helfe dir bei der Einrichtung eines Hostings — oder empfehle dir eine günstige, schnelle Lösung. Das Hosting läuft direkt über dich.</p></div></div>
+
+  <div class="faq-list">
+    <div class="fq ri"><button class="fq-btn" onclick="faq(this)"><span>Wie läuft die Zusammenarbeit ab?</span><span class="fq-ic">+</span></button><div class="fq-ans"><p>Wir starten mit einem kurzen Gespräch. Dann kommt Konzept und Angebot. Nach deiner Freigabe startet die Entwicklung — du wirst laufend informiert.</p></div></div>
+    <div class="fq ri"><button class="fq-btn" onclick="faq(this)"><span>Wie lange dauert ein Projekt?</span><span class="fq-ic">+</span></button><div class="fq-ans"><p>Je nach Paket 3–7 Werktage. Bei größeren Projekten bis zu 2 Wochen — immer transparent kommuniziert.</p></div></div>
+    <div class="fq ri"><button class="fq-btn" onclick="faq(this)"><span>Was brauche ich zum Starten?</span><span class="fq-ic">+</span></button><div class="fq-ans"><p>Im Idealfall Logo, Texte und Bilder. Falls noch nicht vorhanden — kein Problem, wir arbeiten mit Platzhaltern.</p></div></div>
+    <div class="fq ri"><button class="fq-btn" onclick="faq(this)"><span>Kann ich die Seite selbst bearbeiten?</span><span class="fq-ic">+</span></button><div class="fq-ans"><p>Ja. Du bekommst eine Einführung und kannst Inhalte selbst anpassen. Auf Wunsch richte ich ein CMS ein.</p></div></div>
+    <div class="fq ri"><button class="fq-btn" onclick="faq(this)"><span>Bietest du Hosting an?</span><span class="fq-ic">+</span></button><div class="fq-ans"><p>Ich helfe beim Setup — das Hosting läuft direkt über dich, keine Zwischenkosten.</p></div></div>
   </div>
 </section>
 
 <!-- CTA -->
-<div class="cta-wrap" id="kontakt">
+<section class="cta-sec" id="kontakt">
   <div class="cta-inner ri">
-    <div>
-      <h2 class="cta-title">Bereit für deine neue Website?</h2>
-      <p class="cta-sub">Schreib mir kurz worum es geht — ich melde mich innerhalb von 24 Stunden.</p>
-    </div>
-    <div class="cta-right">
-      <div class="cta-mail">hallo@pageforge.at</div>
-      <a class="btn-dark" href="mailto:hallo@pageforge.at">Jetzt anfragen →</a>
-    </div>
+    <div class="cta-label">PROJEKT STARTEN</div>
+    <h2 class="cta-title">BEREIT<br>FÜR DEINE<br><em>NEUE SITE?</em></h2>
+    <p class="cta-sub">Schreib mir kurz worum es geht — ich melde mich innerhalb von 24 Stunden mit einem konkreten Angebot.</p>
+    <a href="mailto:hallo@pageforge.at" class="cta-btn">hallo@pageforge.at →</a>
   </div>
-</div>
+  <div class="cta-deco">PAGEFORGE</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="ft-top">
-    <div>
-      <div class="ft-logo">
-        <div class="ft-mark">
-          <svg viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" fill="#34d378"/><rect x="8" y="8" width="5" height="5" fill="#34d378"/><rect x="8" y="1" width="5" height="5" fill="#34d378" opacity="0.35"/></svg>
-        </div>
-        PageForge
-      </div>
-      <div class="ft-tagline">Websites die wirken — aus Innsbruck.</div>
+  <div class="ft-inner">
+    <div class="ft-logo">PAGE<span>FORGE</span></div>
+    <div class="ft-mid">
+      <span>Innsbruck, Österreich</span>
+      <span>hallo@pageforge.at</span>
     </div>
-    <div class="ft-cols">
-      <div class="ft-col">
-        <h5>Leistungen</h5>
-        <ul>
-          <li><a href="#">Landing Pages</a></li>
-          <li><a href="#">Corporate Sites</a></li>
-          <li><a href="#">Online Shops</a></li>
-          <li><a href="#">SEO Optimierung</a></li>
-        </ul>
-      </div>
-      <div class="ft-col">
-        <h5>Rechtliches</h5>
-        <ul>
-          <li><a href="#">Impressum</a></li>
-          <li><a href="#">Datenschutz</a></li>
-          <li><a href="#">AGB</a></li>
-        </ul>
-      </div>
+    <div class="ft-links">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
     </div>
   </div>
-  <div class="ft-bottom">
-    <span class="ft-copy">© 2026 PageForge — Alle Rechte vorbehalten</span>
-    <div class="ft-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
-  </div>
+  <div class="ft-copy">© 2026 PageForge</div>
 </footer>
 
 <script src="main.js"></script>

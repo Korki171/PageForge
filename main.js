@@ -1,82 +1,47 @@
-// ── CURSOR ──
-const dot = document.getElementById('dot');
-const ring = document.getElementById('ring');
-let mx = 0, my = 0, rx = 0, ry = 0;
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  dot.style.transform = `translate(${mx - 2.5}px, ${my - 2.5}px)`;
+// cursor
+const cur = document.getElementById('cur');
+let mx=0,my=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX; my=e.clientY;
+  cur.style.transform=`translate(${mx-5}px,${my-5}px)`;
+});
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='36px';cur.style.height='36px';cur.style.borderRadius='0';});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';cur.style.borderRadius='50%';});
 });
 
-(function loop() {
-  rx += (mx - rx - 16) * 0.1;
-  ry += (my - ry - 16) * 0.1;
-  ring.style.transform = `translate(${rx}px, ${ry}px)`;
-  requestAnimationFrame(loop);
-})();
+// reveal
+const io=new IntersectionObserver(es=>es.forEach((e,i)=>{
+  if(e.isIntersecting) setTimeout(()=>e.target.classList.add('visible'),i*65);
+}),{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+document.querySelectorAll('.ri').forEach(el=>io.observe(el));
 
-document.querySelectorAll('a, button').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    dot.style.width = '40px';
-    dot.style.height = '40px';
-    dot.style.borderRadius = '6px';
-    ring.style.opacity = '0';
-  });
-  el.addEventListener('mouseleave', () => {
-    dot.style.width = '5px';
-    dot.style.height = '5px';
-    dot.style.borderRadius = '50%';
-    ring.style.opacity = '1';
-  });
+// nav
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').style.borderBottomColor=window.scrollY>40?'var(--ink)':'var(--ink)';
 });
 
-// ── SCROLL REVEAL ──
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 60);
-    }
-  });
-}, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
-
-document.querySelectorAll('.ri').forEach(el => io.observe(el));
-
-// ── NAV SCROLL ──
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
+// mobile menu
+const burger=document.getElementById('burger');
+const mob=document.getElementById('mobMenu');
+let open=false;
+burger.addEventListener('click',()=>{
+  open=!open;
+  mob.classList.toggle('open',open);
+  const s=burger.querySelectorAll('span');
+  if(open){s[0].style.transform='translateY(6.5px) rotate(45deg)';s[1].style.transform='translateY(-6.5px) rotate(-45deg)';}
+  else{s[0].style.transform='';s[1].style.transform='';}
 });
-
-// ── MOBILE MENU ──
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
-let menuOpen = false;
-
-burger.addEventListener('click', () => {
-  menuOpen = !menuOpen;
-  mobileMenu.classList.toggle('open', menuOpen);
-  const spans = burger.querySelectorAll('span');
-  if (menuOpen) {
-    spans[0].style.transform = 'translateY(6.5px) rotate(45deg)';
-    spans[1].style.transform = 'translateY(-6.5px) rotate(-45deg)';
-  } else {
-    spans[0].style.transform = '';
-    spans[1].style.transform = '';
-  }
-});
-
-function closeMobile() {
-  menuOpen = false;
-  mobileMenu.classList.remove('open');
-  const spans = burger.querySelectorAll('span');
-  spans[0].style.transform = '';
-  spans[1].style.transform = '';
+function closeMob(){
+  open=false; mob.classList.remove('open');
+  const s=burger.querySelectorAll('span');
+  s[0].style.transform='';s[1].style.transform='';
 }
 
-// ── FAQ ──
-function faq(btn) {
-  const item = btn.closest('.fq');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.fq.open').forEach(el => el.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
+// faq
+function faq(btn){
+  const item=btn.closest('.fq');
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.fq.open').forEach(el=>el.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
 }
