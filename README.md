@@ -1,97 +1,55 @@
-# ⚡ PageForge — Professional Website Creation
+# PageForge
 
-<p align="center">
-  <strong>Maßgeschneiderte Websites für B2B-Unternehmen.</strong><br>
-  Modern, performant und auf Konversion optimiert.
-</p>
+Deine persönliche Web-Agency Website — dark, minimalistisch, grünes Farbschema.
 
-<p align="center">
-  <a href="#features">Features</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#project-structure">Struktur</a> •
-  <a href="#license">Lizenz</a>
-</p>
+## Dateien
 
----
+```
+pageforge/
+├── index.html      ← Hauptseite
+├── style.css       ← Alle Styles
+├── main.js         ← Cursor, Animationen, FAQ, Menü
+├── vercel.json     ← Vercel Konfiguration
+└── README.md
+```
 
-## ✨ Features
+## Deployment auf Vercel (kostenlos)
 
-- **Responsive Design** — Optimiert für Desktop, Tablet und Mobile
-- **Dark Mode Premium UI** — Modernes Design mit Glassmorphism-Effekten
-- **Scroll-Animationen** — Intersection Observer basierte Reveal-Animationen
-- **Kontaktformular** — Client-seitige Validierung mit Feedback-Animationen
-- **SEO-optimiert** — Meta-Tags, semantisches HTML, performante Assets
-- **Accessibility** — ARIA-Labels, Keyboard-Navigation, guter Kontrast
-- **Schnelle Ladezeit** — Keine Frameworks, reines HTML/CSS/JS
+### Option A — über GitHub (empfohlen)
 
-## 🛠 Tech Stack
+1. Geh auf [github.com](https://github.com) → **New repository**
+2. Name z.B. `pageforge` → **Create repository**
+3. Lade alle 4 Dateien hoch (drag & drop im Browser)
+4. Geh auf [vercel.com](https://vercel.com) → **Add New Project**
+5. GitHub-Repo auswählen → **Deploy**
+6. Fertig — deine Seite ist live!
 
-| Technologie | Verwendung |
-|---|---|
-| HTML5 | Semantische Struktur |
-| CSS3 | Custom Properties, Grid, Flexbox, Animationen |
-| JavaScript | Vanilla JS (Intersection Observer, DOM API) |
-| Google Fonts | Inter (Typografie) |
-
-## 🚀 Getting Started
-
-### Voraussetzungen
-
-Ein moderner Webbrowser — keine Build-Tools oder Server notwendig.
-
-### Lokal starten
+### Option B — direkt via Vercel CLI
 
 ```bash
-# Repository klonen
-git clone https://github.com/YOUR_USERNAME/PageForge.git
-
-# In den Ordner wechseln
-cd PageForge
-
-# Im Browser öffnen
-open index.html
+npm install -g vercel
+cd pageforge
+vercel
 ```
 
-Oder nutzen Sie einen lokalen Dev-Server:
+## Anpassen
 
-```bash
-npx serve .
+### Deine Infos eintragen
+In `index.html` folgendes ersetzen:
+- `hallo@pageforge.at` → deine echte E-Mail
+- `Web Design Studio — Innsbruck` → dein Standort
+- Preise (490€ / 1.290€ / 2.490€) → deine echten Preise
+- Kundenstimmen → echte Bewertungen
+
+### Farbe ändern
+In `style.css` die Zeile:
+```css
+--green: #34d378;
 ```
+auf eine andere Farbe setzen — alles passt sich automatisch an.
 
-## 📁 Project Structure
+## Custom Domain auf Vercel
 
-```
-PageForge/
-├── index.html          # Landing Page (Hauptseite)
-├── style.css           # Design System & Styles
-├── script.js           # Interaktionen & Animationen
-├── assets/
-│   └── images/         # Portfolio-Bilder
-├── README.md
-├── LICENSE
-└── .gitignore
-```
-
-## 📸 Sektionen
-
-| Sektion | Beschreibung |
-|---|---|
-| Hero | Headline, CTA-Buttons, Key-Stats |
-| Leistungen | 4 Services (Landing Pages, E-Commerce, Web-Apps, SEO) |
-| Ablauf | 4-Schritte-Prozess |
-| Portfolio | Projekt-Showcase mit Hover-Overlays |
-| Preise | 3 Pakete (Starter, Business, Enterprise) |
-| Kundenstimmen | Testimonials |
-| Kontakt | Formular + Kontaktdaten |
-| Footer | Links, Social, Legal |
-
-## 📄 License
-
-Dieses Projekt steht unter der [MIT License](LICENSE).
-
----
-
-<p align="center">
-  Made with ⚡ by <strong>PageForge</strong>
-</p>
+1. Vercel Dashboard → dein Projekt → **Settings → Domains**
+2. Deine Domain eingeben (z.B. `pageforge.at`)
+3. DNS-Einträge beim Domain-Anbieter setzen (Vercel zeigt dir genau was)
